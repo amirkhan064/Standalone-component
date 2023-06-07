@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body, html {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  font-family: sans-serif;
+body,
+html {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #000000de;
+  background: #fff;
+  box-sizing: border-box;
 }

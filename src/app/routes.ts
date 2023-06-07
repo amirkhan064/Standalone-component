@@ -1,21 +1,30 @@
+import {
+  provideHttpClient,
+  withRequestsMadeViaParent,
+  withInterceptors,
+} from '@angular/common/http';
 import { Routes } from '@angular/router';
+import { ProductsComponent } from './pages/products/products.component';
+import { AuthorizationInterceptor } from './auth/http-interceptor.service';
 
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+    loadComponent: () =>
+      import('./pages/home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'domains',
-    loadComponent: () => import('./pages/domains/domains.component').then(m => m.DomainsComponent)
+    path: 'products',
+    loadChildren: () => import('./product-route').then((m) => m.ADMIN_ROUTES),
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
-  }
-]
+    loadComponent: () =>
+      import('./pages/about/about.component').then((m) => m.AboutComponent),
+  },
+];

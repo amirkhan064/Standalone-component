@@ -7,10 +7,6 @@ import { ContainerLayoutComponent } from 'src/app/components/container-layout/co
   standalone: true,
   imports: [CommonModule, ContainerLayoutComponent],
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
 })
-export class AboutComponent {
-
-
-
-}
+export class AboutComponent {}
