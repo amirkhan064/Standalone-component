@@ -9,3 +9,32 @@ html {
   background: #fff;
   box-sizing: border-box;
 }
+
+.bg-blk-500 {
+  background: black;
+  font-weight: 500;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.font-medium {
+  font-size: 16px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.p-3 {
+  padding: 16px 24px;
+}
+
+.no-border {
+  border: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}

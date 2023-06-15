@@ -21,6 +21,7 @@ export const routes: Routes = [
   {
     path: 'products',
     loadChildren: () => import('./product-route').then((m) => m.ADMIN_ROUTES),
+    // RouterModule.forChild no need
   },
   {
     path: 'about',

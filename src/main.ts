@@ -19,7 +19,7 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(RouterModule.forRoot(routes)),
-    provideHttpClient(),
+    // provideHttpClient(withInterceptors([AuthorizationInterceptor])),
   ],
 }).catch((err) => console.error(err));
 
@@ -70,3 +70,10 @@ bootstrapApplication(AppComponent, {
 // platformBrowserDynamic()
 //   .bootstrapModule(AppModule)
 //   .catch((err) => console.error(err));
+
+// Advanced Topics
+
+// Environment injectors
+// Directive composition API
+// The Angular forwardRef() function creates an indirect reference that Angular can resolve later.
+// For example, this situation happens when a standalone parent component imports a standalone child component and vice-versa. You can resolve this circular dependency issue by using the forwardRef function.
